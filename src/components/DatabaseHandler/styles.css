@@ -1,0 +1,215 @@
+table {
+    border-collapse: separate;
+    table-layout: fixed;
+    width: 100%;
+    border: 3px solid rgba(111, 64, 119, 0.405);
+    border-radius: 8px !important;
+    text-align: center;
+    background-color: rgb(230, 251, 251);
+}
+
+th,
+td {
+    border: 2px solid rgba(111, 64, 119, 0.276);
+    background-color: azure;
+    border-radius: 6px;
+}
+
+hr {
+    border: 2px solid rgba(120, 57, 129, 0.584);
+    border-radius: 2px;
+    background-color: azure;
+    margin: 5px 0px;
+}
+
+th {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgba(109, 72, 146, 0.898);
+    color: white;
+}
+
+th,
+td {
+    padding: 20px;
+}
+
+.cell-label {
+    font-style: italic;
+    color: rgb(150, 93, 203);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+th:last-child {
+    padding: 0;
+    width: 8%;
+}
+
+.holder:empty {
+    quotes: none;
+}
+
+.holder:empty:before {
+    content: attr(placeholder);
+    color: lightgray;
+    display: block;
+    position: absolute;
+    font-family: "Campton", sans-serif;
+}
+
+.intention-holder {
+    padding: 5px;
+}
+
+.holder-parent,
+.holder {
+    display: block;
+    word-wrap: break-word;
+    height: inherit;
+    cursor: text;
+    padding: 4px;
+    color: rgb(120, 113, 113);
+    font-family: "Campton", sans-serif;
+}
+
+.holder-parent:focus,
+.holder:focus {
+    outline: none;
+}
+
+.holder {
+    quotes: '"''"';
+    background-color: hsla(0, 0%, 100%, 0.521);
+    border: solid 1px rgba(130, 168, 170, 0.559);
+    box-shadow:
+        3px 3px 5px grey;
+    border-radius: 9px;
+    padding: 5px;
+    margin: 4px;
+    opacity: .85;
+}
+
+.holder:focus {
+    quotes: none !important;
+    font-style: italic;
+    color: rgba(57, 123, 98, 0.744);
+    background-color: hsl(0, 0%, 100%);
+    border: solid 1px rgb(130, 168, 170);
+    box-shadow: 3px 3px 5px grey;
+    border-radius: 8px;
+    padding: 6.5px;
+    opacity: .9;
+}
+
+thead th:nth-child(1) {
+    width: 20%;
+    justify-content: center;
+}
+
+tbody tr {
+    text-align: left;
+    padding: 5px;
+    margin: 5px
+}
+
+tbody tr td {
+    padding: 15px;
+}
+
+tbody td:nth-child(1) {
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+    margin-left: 0px;
+    padding-left: 5px;
+}
+
+tbody tr td:nth-child(2) {
+    text-align: left;
+}
+
+tbody td:nth-child(3) {
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+}
+
+thead th:nth-child(2) {
+    width: 20%;
+}
+
+thead th:nth-child(3) {
+    width: 20%;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px;
+    padding-bottom: 8px;
+}
+
+.buttons {
+    border: 1px solid rgba(111, 64, 119, 0.405);
+    margin: 2px;
+    padding: 4px 12px !important; 
+}
+
+.disabled-edit-warning {
+    text-align: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    padding: 7px 12px;
+    color: rgb(126, 121, 121);
+}
+
+.add-new-line-button {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    background-color: rgba(109, 72, 146, 0.898);
+    padding: 7px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.delete-line-button {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    background-color: rgba(218, 83, 83, 0.898);
+    padding: 7px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.restore-button {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    background-color: rgba(83, 139, 218, 0.898);
+    padding: 7px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.save-changes-button {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    background-color: rgba(9, 132, 107, 0.687);
+    padding: 7px 12px;
+    border-radius: 8px;
+}
+
+.save-changes-button:enabled:hover {
+    background-color: rgba(34, 136, 116, 0.941);
+    font-style: italic;
+    cursor: pointer;
+}
+
+.page-container {
+    padding-bottom: 20px;
+}

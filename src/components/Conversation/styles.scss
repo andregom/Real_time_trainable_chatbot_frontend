@@ -1,0 +1,116 @@
+.messages {
+    background-color: #9934ec28;
+    border-radius: 10px;
+    border: rgba(195, 165, 246, 0.807) solid 0.4px;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 0px;
+    height: 70vh;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    padding-bottom: 5px;
+    margin-bottom: 4px;
+    z-index: -1;
+}
+
+.messages::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.75;
+    background-image: url("../../assets/1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    overflow: hidden;
+}
+
+@media (max-width: 1250px) {
+    .messages::after {
+        opacity: 0.65;
+    }
+}
+
+@media (max-width: 650px) {
+    .messages::after {
+        background-position-x: center;
+        background-repeat: space;
+        opacity: 0.4;
+    }
+}
+
+.messages ul {
+    margin-top: 0px;
+    display: inline;
+    z-index: 1;
+}
+
+.message-container {
+    display: flexbox;
+    line-height: 40px;
+}
+
+.message-content {
+    z-index: 1;
+    width: min-content;
+    display: inline;
+    color: rgb(98, 120, 141);
+    background-color: rgba(253, 253, 253, 0.764);
+    border: rgba(219, 201, 250, 0.693) solid 0.3px;
+    border-radius: 10px;
+    box-shadow:
+        3px 2.5px 4px grey;
+    padding: 5px;
+    margin: auto 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.message-sender-form {
+    display: flex;
+}
+
+.message-sender-container {
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.message-sender-container input{
+    width: 100%;
+    padding: 8px;
+    border: rgba(219, 201, 250, 0.693) solid 0.3px;
+    color: rgb(118, 138, 158);
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 500;
+    padding-left: 14px;
+    border-radius: 12px;
+    margin-right: 5px;
+    &:focus {
+        outline: none !important;
+        border: rgba(174, 157, 204, 0.976) solid 0.6px !important;
+    }
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.message-sender-container button {
+    margin-right: 0;
+    padding-right: 0;
+    background-color: rgba(140, 53, 136, 0.369);
+    color: white;
+    padding: 2px;
+    border: rgba(192, 157, 204, 0.976) solid 0.6px !important;
+    border-radius: 10px !important;
+    &:hover {
+        background-color: rgb(175, 108, 208);
+        cursor: pointer;
+    }
+}
