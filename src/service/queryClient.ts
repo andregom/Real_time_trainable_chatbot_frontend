@@ -1,7 +1,7 @@
 import { axiosPrivate } from "../api/axios";
 import { QueryClient } from "react-query";
 
-export const BASE_URL = 'https://13.59.254.151:5000';
+export const BASE_URL = 'http://13.59.254.151:5000';
 
 export const queryClient = new QueryClient({
     defaultOptions: {
