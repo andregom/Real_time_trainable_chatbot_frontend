@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/omnichatbot/static/css/main.fb124ba0.css",
-    "main.js": "/omnichatbot/static/js/main.c3764248.js",
+    "main.js": "/omnichatbot/static/js/main.1ebed367.js",
     "static/media/1.png": "/omnichatbot/static/media/1.79663360944bde2daab4.png",
     "static/media/4.png": "/omnichatbot/static/media/4.1c4690a3e93ff4cec3b0.png",
     "static/media/2.png": "/omnichatbot/static/media/2.2f10363b831a48e704cb.png",
     "static/media/3.png": "/omnichatbot/static/media/3.a8437014d33868aaf056.png",
     "index.html": "/omnichatbot/index.html",
     "main.fb124ba0.css.map": "/omnichatbot/static/css/main.fb124ba0.css.map",
-    "main.c3764248.js.map": "/omnichatbot/static/js/main.c3764248.js.map"
+    "main.1ebed367.js.map": "/omnichatbot/static/js/main.1ebed367.js.map"
   },
   "entrypoints": [
     "static/css/main.fb124ba0.css",
-    "static/js/main.c3764248.js"
+    "static/js/main.1ebed367.js"
   ]
 }
