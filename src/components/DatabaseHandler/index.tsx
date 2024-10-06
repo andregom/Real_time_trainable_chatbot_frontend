@@ -230,6 +230,7 @@ const DatabaseTable: React.FC<DatabaseTableProps> = (props) => {
         if (!(e.target as HTMLElement).innerText.trim() && e.key === 'Backspace') {
             (e.target as HTMLElement).previousElementSibling != null && ((e.target as HTMLElement).previousElementSibling as HTMLElement).focus();
             const currentArray = itens[currentIndex ?? itens.length][rowKey];
+            if (!(e.target as HTMLElement).innerText && currentArray.length > 1) {
             e.preventDefault();
             if (currentArray.length > 1) {
                 (currentArray as string[]).splice(index, 1);
