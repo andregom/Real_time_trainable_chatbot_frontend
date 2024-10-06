@@ -11,7 +11,7 @@ interface DatabasePageProps {
 
 const DatabasePage: React.FC<DatabasePageProps> = (props) => {
 
-    const { data, isFetching } = useQuery<IDataBase>(DATABASE_URL, { refetchOnWindowFocus: true });
+    const { data, isFetching } = useQuery<IDataBase>(DATABASE_URL, { refetchOnWindowFocus: false });
     const [database, setDatabase] = useState<IDataBase>({ problems: [] });
 
     useEffect(() => {
