@@ -237,6 +237,8 @@ const DatabaseTable: React.FC<DatabaseTableProps> = (props) => {
             } else {
                 itens.splice(currentIndex ?? itens.length, 1);
             }
+                setItens([...itens]);
+            }
             setItens([...itens]);
         }
     }
