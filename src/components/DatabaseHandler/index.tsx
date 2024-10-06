@@ -225,7 +225,7 @@ const DatabaseTable: React.FC<DatabaseTableProps> = (props) => {
             const currentArray = itens[currentIndex ?? itens.length][rowKey];
             (currentArray as string[]).splice(index + 1, 0, '');
             setItens([...itens]);
-            ((e.target as HTMLElement).nextElementSibling as HTMLElement).focus();
+            setTimeout(() => ((e.target as HTMLElement).nextElementSibling as HTMLElement).focus(), 5);
         }
         if (e.key === 'Backspace') {
             const currentArray = itens[currentIndex ?? itens.length][rowKey];
