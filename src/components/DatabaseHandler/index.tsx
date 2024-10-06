@@ -234,6 +234,9 @@ const DatabaseTable: React.FC<DatabaseTableProps> = (props) => {
             e.preventDefault();
             if (currentArray.length > 1) {
                 (currentArray as string[]).splice(index, 1);
+            } else {
+                itens.splice(currentIndex ?? itens.length, 1);
+            }
                 setItens([...itens]);
             }
         }
