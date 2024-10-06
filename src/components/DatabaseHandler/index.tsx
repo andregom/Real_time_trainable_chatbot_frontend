@@ -219,13 +219,13 @@ const DatabaseTable: React.FC<DatabaseTableProps> = (props) => {
         return pageIndex + indexOfCurrentPageIten;
     }
 
-    const handleKeyDown = (e: React.KeyboardEvent, rowKey: ItenKeys, index: number) => {
-        if (e.key === 'Enter') {
+    const handleKeyDown = async (e: React.KeyboardEvent, rowKey: ItenKeys, index: number) => {
+        if ((e.target as HTMLElement).innerText.trim() && e.key === 'Enter') {
             e.preventDefault();
             const currentArray = itens[currentIndex ?? itens.length][rowKey];
             (currentArray as string[]).splice(index + 1, 0, '');
             setItens([...itens]);
-            setTimeout(() => ((e.target as HTMLElement).nextElementSibling as HTMLElement).focus(), 5)
+            ((e.target as HTMLElement).nextElementSibling as HTMLElement).focus();
         }
         if (e.key === 'Backspace') {
             const currentArray = itens[currentIndex ?? itens.length][rowKey];
