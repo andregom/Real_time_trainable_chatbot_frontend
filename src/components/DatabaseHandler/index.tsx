@@ -225,20 +225,18 @@ const DatabaseTable: React.FC<DatabaseTableProps> = (props) => {
             const currentArray = itens[currentIndex ?? itens.length][rowKey];
             (currentArray as string[]).splice(index + 1, 0, '');
             setItens([...itens]);
-            ((e.target as HTMLElement).nextElementSibling as HTMLElement).focus();
+            setTimeout(() => ((e.target as HTMLElement).nextElementSibling as HTMLElement).focus(), 5);
         }
         if (!(e.target as HTMLElement).innerText.trim() && e.key === 'Backspace') {
             (e.target as HTMLElement).previousElementSibling != null && ((e.target as HTMLElement).previousElementSibling as HTMLElement).focus();
             const currentArray = itens[currentIndex ?? itens.length][rowKey];
-            if (!(e.target as HTMLElement).innerText && currentArray.length > 1) {
             e.preventDefault();
             if (currentArray.length > 1) {
                 (currentArray as string[]).splice(index, 1);
             } else {
                 itens.splice(currentIndex ?? itens.length, 1);
             }
-                setItens([...itens]);
-            }
+            setItens([...itens]);
         }
     }
 
@@ -270,7 +268,7 @@ const DatabaseTable: React.FC<DatabaseTableProps> = (props) => {
                                 <div className="cell-label">Tag:</div>
                                 <span
                                     className="intention-holder holder"
-                                    placeholder="Intenção"
+                                    // placeholder="Intenção"
                                     spellCheck={false}
                                     contentEditable={isEditable}
                                     suppressContentEditableWarning={true}
@@ -296,7 +294,7 @@ const DatabaseTable: React.FC<DatabaseTableProps> = (props) => {
                                             contentEditable={isEditable}
                                             suppressContentEditableWarning={true}
                                             className="holder"
-                                            placeholder="Exemplos"
+                                            // placeholder="Exemplos"
                                             onKeyDown={(e) => { handleKeyDown(e, 'patterns', patternIndex) }}
                                             // onChange={updatePatterns}
                                             onBlur={e => { updateItem(e, updatePatterns, patternIndex) }}
@@ -320,7 +318,7 @@ const DatabaseTable: React.FC<DatabaseTableProps> = (props) => {
                                         <span
                                             key={responseIndex}
                                             className="holder"
-                                            placeholder="Respostas"
+                                            // placeholder="Respostas"
                                             contentEditable={isEditable}
                                             suppressContentEditableWarning={true}
                                             onKeyDown={(e) => { handleKeyDown(e, 'responses', responseIndex) }}
