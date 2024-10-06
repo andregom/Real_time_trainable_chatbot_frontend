@@ -231,7 +231,8 @@ const DatabaseTable: React.FC<DatabaseTableProps> = (props) => {
             (e.target as HTMLElement).previousElementSibling != null && ((e.target as HTMLElement).previousElementSibling as HTMLElement).focus();
             const currentArray = itens[currentIndex ?? itens.length][rowKey];
             if (!(e.target as HTMLElement).innerText && currentArray.length > 1) {
-                e.preventDefault();
+            e.preventDefault();
+            if (currentArray.length > 1) {
                 (currentArray as string[]).splice(index, 1);
                 setItens([...itens]);
             }
