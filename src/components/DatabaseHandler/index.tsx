@@ -225,9 +225,10 @@ const DatabaseTable: React.FC<DatabaseTableProps> = (props) => {
             const currentArray = itens[currentIndex ?? itens.length][rowKey];
             (currentArray as string[]).splice(index + 1, 0, '');
             setItens([...itens]);
-            setTimeout(() => ((e.target as HTMLElement).nextElementSibling as HTMLElement).focus(), 5);
+            ((e.target as HTMLElement).nextElementSibling as HTMLElement).focus();
         }
-        if (e.key === 'Backspace') {
+        if (!(e.target as HTMLElement).innerText.trim() && e.key === 'Backspace') {
+            (e.target as HTMLElement).previousElementSibling != null && ((e.target as HTMLElement).previousElementSibling as HTMLElement).focus();
             const currentArray = itens[currentIndex ?? itens.length][rowKey];
             if (!(e.target as HTMLElement).innerText && currentArray.length > 1) {
                 e.preventDefault();
